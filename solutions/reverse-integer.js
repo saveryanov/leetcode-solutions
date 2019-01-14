@@ -9,23 +9,12 @@ const USE_STRING_SOLUTION = false;
  * @return {number}
  */
 var reverse = function (x) {
-    let integerMax = 2147483647;
-    let integerMin = -2147483648;
-
     if (USE_STRING_SOLUTION) {
-        let result = x < 0 ? '-' : '';
-        let str = x.toString();
-        for (let i = str.length - 1; i >= 0; i--) {
-            result += str[i];
-        }
-        result = parseInt(result);
-        if (result > integerMax || result < integerMin) {
-            return 0;
-        } else {
-            return result;
-        }
+        return stringSolution(x);
     }
 
+    let integerMax = 2147483647;
+    let integerMin = -2147483648;
     let result = 0;
     let sign = 1;
 
@@ -46,6 +35,28 @@ var reverse = function (x) {
         return result * sign;
     }
 };
+
+/**
+ * Another solution with a string and parseInt().
+ * @param {number} x
+ * @return {number}
+ */
+function stringSolution(x) {
+    let integerMax = 2147483647;
+    let integerMin = -2147483648;
+
+    let result = x < 0 ? '-' : '';
+    let str = x.toString();
+    for (let i = str.length - 1; i >= 0; i--) {
+        result += str[i];
+    }
+    result = parseInt(result);
+    if (result > integerMax || result < integerMin) {
+        return 0;
+    } else {
+        return result;
+    }
+}
 
 /**
  * Some tests for checking the result
