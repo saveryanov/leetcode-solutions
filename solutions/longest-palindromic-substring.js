@@ -31,7 +31,7 @@ function bruteForce(str) {
 }
 
 /**
- * Reverse string
+ * Check is string a palindrome
  *
  * @param {*} str
  * @returns
