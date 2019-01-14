@@ -1,0 +1,27 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "Leetcode solutions (javascript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saveryanov/leetcode-solutions.git"
+  },
+  "keywords": [
+    "leetcode",
+    "solutions",
+    "problems"
+  ],
+  "author": "Sergey Averyanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saveryanov/leetcode-solutions/issues"
+  },
+  "homepage": "https://github.com/saveryanov/leetcode-solutions#readme",
+  "dependencies": {
+    "performance-now": "^2.1.0"
+  }
+}

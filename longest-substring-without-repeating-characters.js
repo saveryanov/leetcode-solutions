@@ -26,7 +26,7 @@ var lengthOfLongestSubstring = function (str) {
  * Some tests for checking the result
  */
 function test() {
-    let tests = {
+    let testCases = {
         'abcabcbb': 3,
         'bbb': 1,
         'pwwkew': 3,
@@ -37,9 +37,9 @@ function test() {
         '00001231112342223': 4,
     };
 
-    for (let str of Object.keys(tests)) {
+    for (let str of Object.keys(testCases)) {
         let result = lengthOfLongestSubstring(str);
-        console.log(` ${(result !== tests[str]) ? '❌' : '✅'} [${str}] output: ${result}; expected ${tests[str]};`);
+        console.log(` ${(result !== testCases[str]) ? '❌' : '✅'} [${str}] output: ${result}; expected ${testCases[str]};`);
     }
 }
 
