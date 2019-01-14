@@ -96,6 +96,10 @@ function test() {
             expected: 120,
         },
         {
+            x: '+120',
+            expected: 120,
+        },
+        {
             x: '12000',
             expected: 12000,
         },
