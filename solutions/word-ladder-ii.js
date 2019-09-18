@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/word-ladder-ii/
 /*
-Runtime: 1908 ms, faster than 39.10% of JavaScript online submissions for Word Ladder II.
-Memory Usage: 73.7 MB, less than 100.00% of JavaScript online submissions for Word Ladder II.
+Runtime: 1780 ms, faster than 40.14% of JavaScript online submissions for Word Ladder II.
+Memory Usage: 73.1 MB, less than 100.00% of JavaScript online submissions for Word Ladder II.
 */
 
 
@@ -20,7 +20,6 @@ class WordLadder {
         this.beginWord = beginWord;
         this.endWord = endWord;
         this.wordList = wordList;
-        this.shortestWayLength = wordList.length;
         this.graph = this.buildGraph();
         this.shortestWayLengths = {}; // cached shortest ways lenghts from words to endWord
     }
