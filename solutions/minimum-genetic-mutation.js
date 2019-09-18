@@ -35,7 +35,7 @@ class WordLadder {
 
     bfsWayLength() {
         let visited = {};
-        let queue = [{ word: this.beginWord, length: 1 }];
+        let queue = [{ word: this.beginWord, length: 0 }];
         visited[this.beginWord] = true;
         while (queue.length) {
             let current = queue.shift();
@@ -48,28 +48,28 @@ class WordLadder {
                 queue.push({ word: childWord, length: current.length + 1 });
             }
         }
-        return 0;
+        return -1;
     }
 }
 
 /**
- * @param {string} beginWord
- * @param {string} endWord
- * @param {string[]} wordList
- * @return {string[][]}
+ * @param {string} start
+ * @param {string} end
+ * @param {string[]} bank
+ * @return {number}
  */
-function ladderLength(beginWord, endWord, wordList) {
+function minMutation(start, end, bank) {
     // main
-    if (wordList.indexOf(endWord) === -1) return 0;
-    if (countWordsDiff(beginWord, endWord) == 1) {
-        return 2;
+    if (bank.indexOf(end) === -1) return -1;
+    if (countWordsDiff(start, end) == 1) {
+        return 1;
     }
 
-    if (wordList.indexOf(beginWord) === -1) {
-        wordList.push(beginWord);
+    if (bank.indexOf(start) === -1) {
+        bank.push(start);
     }
 
-    const wordLadder = new WordLadder(beginWord, endWord, wordList);
+    const wordLadder = new WordLadder(start, end, bank);
 
     return wordLadder.bfsWayLength();
-}
+};
