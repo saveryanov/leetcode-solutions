@@ -6,9 +6,9 @@
  */
 function maxAreaOfIsland(grid) {
     let height = grid.length;
-    if (!height) return grid;
+    if (!height) return 0;
     let width = grid[0].length;
-    if (!width) return grid;
+    if (!width) return 0;
 
     function checkIsland(x, y) {
         if (x < 0 || x >= width || y < 0 || y >= height) return 0;
